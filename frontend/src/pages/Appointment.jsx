@@ -1,11 +1,11 @@
 import React from 'react'
 
-function login() {
+const Appointment = () => {
   return (
     <div>
-      Login Page
+      
     </div>
   )
 }
 
-export default login
+export default Appointment

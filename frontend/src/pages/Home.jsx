@@ -1,9 +1,16 @@
 import React from 'react'
+import Header from '../components/Header';
+import SpecialityMenu from '../components/specialityMenu';
+import TopDoctors from '../components/TopDoctors';
+import Banner from '../components/Banner';
 
 function Home() {
   return (
     <div>
-      Home Page
+      <Header />
+      <SpecialityMenu />
+      <TopDoctors />
+      <Banner />
     </div>
   )
 }
