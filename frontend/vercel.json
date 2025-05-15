@@ -1,5 +1,5 @@
 {
-  "rewrites": [{ "source": "/frontend/(.*)", "destination": "/frontend/index.html" }],
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
   "builds": [
     {
       "src": "package.json",
