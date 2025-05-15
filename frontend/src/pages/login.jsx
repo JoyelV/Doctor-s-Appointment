@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import { useState } from "react";
 
-function login() {
+function Login() {
   const [state,setState] = useState('Sign Up');
 
   const [email,setEmail] = useState('');
@@ -9,10 +9,7 @@ function login() {
 
   const onSubmitHandler = async(event)=>{
     event.preventDefault();
-
-
   }
-
 
   return (
     <form className='min-h-[80vh] flex items-center'>
@@ -43,4 +40,4 @@ function login() {
   )
 }
 
-export default login
+export default Login
