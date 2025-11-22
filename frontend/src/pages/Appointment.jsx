@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { AppContext } from '../context/AppContext';
 import { assets } from '../assets/assets_frontend/assets';
@@ -13,12 +13,6 @@ const Appointment = () => {
   const [docSlot,setDocSlot] = useState([]);
   const [slotIndex,setSlotIndex] = useState(0);
   const [slotTime,setSlotTime] = useState('');
-
-  const fetchDocInfo = async() =>{
-    const docInfo = doctors.find(doc => doc._id === docId);
-    setDocInfo(docInfo);
-    console.log(docInfo);
-  }
 
   const getAvailableSlots = async ()=>{
    setDocSlot([]);
@@ -56,6 +50,11 @@ const Appointment = () => {
   }
 }
   useEffect(()=>{
+  const fetchDocInfo = async() =>{
+    const docInfo = doctors.find(doc => doc._id === docId);
+    setDocInfo(docInfo);
+    console.log(docInfo);
+  }
      fetchDocInfo();
   },[doctors,docId]);
 
@@ -115,7 +114,7 @@ const Appointment = () => {
           </p>
         ))}
      </div>
-     <button className='bg-primary text-white text-white text-sm font-light px-14 py-3 rounded-full'>Book an Appointment</button>
+     <button className='bg-primary text-white text-sm font-light px-14 py-3 rounded-full'>Book an Appointment</button>
     </div>
     {/*------------------Listing Related Doctors---------- */}
     <RelatedDoctors docId={docId} speciality={docInfo.speciality} />

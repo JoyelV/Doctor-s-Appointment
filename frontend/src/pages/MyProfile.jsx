@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { assets } from '../assets/assets_frontend/assets'
 
 const MyProfile = () => {
@@ -31,7 +31,7 @@ const MyProfile = () => {
           <p className='text-blue-500'>{userData.email}</p>
           <p className='font-medium'>Phone:</p>
           {
-            isEdit ? <input className='bg-gray-100 max-w-52' type='text' value={userData.phone} onChange={e => setUserData(prev => ({ ...prev }))} /> : <p>{userData.phone}</p>
+            isEdit ? <input className='bg-gray-100 max-w-52' type='text' value={userData.phone} onChange={() => setUserData(prev => ({ ...prev }))} /> : <p>{userData.phone}</p>
           }
           <p className='font-medium'>Address:</p>
           {

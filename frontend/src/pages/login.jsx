@@ -2,14 +2,7 @@ import { useState } from "react";
 
 function Login() {
   const [state,setState] = useState('Sign Up');
-
-  const [email,setEmail] = useState('');
-  const [password,setPassword] = useState('')
   const [name,setName] = useState('');
-
-  const onSubmitHandler = async(event)=>{
-    event.preventDefault();
-  }
 
   return (
     <form className='min-h-[80vh] flex items-center'>
@@ -25,11 +18,11 @@ function Login() {
        
        <div className='w-full'>
        <p>Email</p>
-       <input className='border border-zinc-300 rounded w-full p-2 mt-1' type='email' onChange={(e)=>setName(e.target.email)} value={email} />
+       <input className='border border-zinc-300 rounded w-full p-2 mt-1' type='email' onChange={(e)=>setName(e.target.email)}  />
        </div>
        <div className='w-full'>
        <p>Password</p>
-       <input className='border border-zinc-300 rounded w-full p-2 mt-1' type='password' onChange={(e)=>setName(e.target.password)} value={password} />
+       <input className='border border-zinc-300 rounded w-full p-2 mt-1' type='password' onChange={(e)=>setName(e.target.password)}  />
        </div>
        <button className='bg-primary text-white w-full py-2 rounded-md text-base'>{state=== 'Sign Up' ? 'Create Account' :'Login'}</button>
        {
